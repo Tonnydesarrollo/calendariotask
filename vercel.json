@@ -1,0 +1,5 @@
+{
+  "name": "tasksync-app",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}

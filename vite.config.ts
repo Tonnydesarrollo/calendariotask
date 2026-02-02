@@ -20,11 +20,33 @@ export default defineConfig(({ mode }) => {
 
     plugins: [
       react(),
-     VitePWA({
-  registerType: 'autoUpdate',
-  injectRegister: 'auto',
-  filename: 'manifest.webmanifest',
-  includeAssets: ['favicon.ico', 'favicon.png'],
+    VitePWA({
+    registerType: 'autoUpdate',
+    injectRegister: 'auto',
+    filename: 'manifest.webmanifest',
+    includeAssets: ['favicon.ico', 'favicon.png', 'icons/icon-192.png', 'icons/icon-512.png'],
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: /^\/icons\//,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'icons-cache',
+            expiration: {
+              maxEntries: 60,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            }
+          }
+        },
+        {
+          urlPattern: /^\/manifest\.webmanifest$/,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'manifest-cache'
+          }
+        }
+      ]
+    },
   manifest: {
   "name": "TaskSync - Control de Tareas",
   "short_name": "TaskSync",
