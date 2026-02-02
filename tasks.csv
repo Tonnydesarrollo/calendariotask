@@ -1,0 +1,6 @@
+
+id,responsableId,tarea,fecha,check,updatedAt
+t1,r1,Revisar informes técnicos,2025-05-20,PENDIENTE,1716124800000
+t2,r2,Llamar a nuevos clientes,2025-05-20,COMPLETADA,1716124800000
+t3,r1,Actualizar sitio web,2025-05-21,PENDIENTE,1716124800000
+t4,r2,Preparar reunión semanal,2025-05-22,PENDIENTE,1716124800000

@@ -1,0 +1,5 @@
+{
+  "name": "Weekly Task Controller",
+  "description": "A comprehensive task management system with a weekly post-it calendar view for clients and a tabular administrative interface for data management, using CSV-based storage logic.",
+  "requestFramePermissions": []
+}
